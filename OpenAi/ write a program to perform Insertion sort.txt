@@ -1,0 +1,28 @@
+OpenAI response for service using AI write a program to perform Insertion sort
+*******************************************
+
+
+
+// Insertion Sort Algorithm 
+//Input: Array A
+//Output: Array A sorted in ascending order
+
+// Step 1: loop through the array A from left to right, starting at index 1.
+// Step 2: On each iteration, select the element at the current index 
+// Step 3: Compare the current element to the elements before it, until you find an element that is smaller than or equal to the current element. 
+// Step 4: Swap the current element with the element you found in Step 3
+// Step 5: When the loop ends, the array A will be sorted in ascending order. 
+
+function insertionSort(A){
+    for(let i=1; i< A.length; i++){
+        let currentElement = A[i];
+        let j = i-1;
+        //compare the currentElement to all the sorted Elements before it
+        while (j>=0 && A[j] > currentElement) {
+            A[j+1] = A[j];
+            j--;
+        }
+        A[j+1] = currentElement;
+    }
+    return A;
+}
